@@ -4,10 +4,15 @@ import { Container } from 'react-bootstrap';
 
 import * as S from './global.styled';
 
-const App = () => {
+interface IAppOwnProps {
+  username: string | undefined;
+  userType: 'admin' | 'moderator' | 'user' | 'guest';
+}
+
+const App: React.FC<IAppOwnProps> = ({ username, userType }): JSX.Element => {
   return (
     <Container>
-      <S.MainTitle>test</S.MainTitle>
+      <S.MainTitle>tests: {username}</S.MainTitle>
     </Container>
   );
 };

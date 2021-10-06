@@ -4,4 +4,4 @@ import './style.css';
 
 import App from './src/App';
 
-render(<App />, document.getElementById('root'));
+render(<App username={'asdf2213'} />, document.getElementById('root'));
